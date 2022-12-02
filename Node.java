@@ -1,10 +1,11 @@
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public class Node implements Comparable<Node>{
     private String name;
+
+    private String detail;
     private ArrayList<Hall> adjacentHalls;
     private boolean visited;
     private Node previousNode;
@@ -20,12 +21,24 @@ public class Node implements Comparable<Node>{
 
     public Node(String name){
         this.name = name;
+        this.detail = name;
         this.adjacentHalls = new ArrayList<>();
         this.northernNeighbor = null;
         this.southernNeighbor = null;
         this.easternNeighbor = null;
         this.westernNeighbor = null;
     }
+
+    public Node(String name, String detail){
+        this.name = name;
+        this.detail = detail;
+        this.adjacentHalls = new ArrayList<>();
+        this.northernNeighbor = null;
+        this.southernNeighbor = null;
+        this.easternNeighbor = null;
+        this.westernNeighbor = null;
+    }
+
 
     public void addAdjacentHalls(Hall hall){this.adjacentHalls.add(hall);}
 
@@ -128,9 +141,13 @@ public class Node implements Comparable<Node>{
         this.distance = distance;
     }
 
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
     @Override
     public String toString() {
-        return this.name;
+        return this.detail;
     }
 
     @Override
