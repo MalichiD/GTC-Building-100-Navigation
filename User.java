@@ -70,4 +70,24 @@ public class User {
     }
 
 
+    public void printRoomDirection(Destination room){
+        if (room.getHallSide() == 'A'){
+            if (direction == 'N' || direction == 'E'){
+                System.out.println("Your destination will be on the left.");
+            } else if (direction == 'S' || direction == 'W') {
+                System.out.println("Your destination will be on the right.");
+            }
+        } else if (room.getHallSide() == 'B'){
+            if (direction == 'N' || direction == 'E'){
+                System.out.println("Your destination will be on the right.");
+            } else if (direction == 'S' || direction == 'W') {
+                System.out.println("Your destination will be on the left.");
+            }
+        } else if (room.getHallSide() == 'C') {
+            System.out.println("Your destination is straight ahead.");
+        }
+
+    }
+
+
 }
