@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.building100navigator.NavController">
+   <left>
+      <Pane prefHeight="644.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="163.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gwinnett Technical College">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="184.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Building 100 Navigator">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Pane layoutX="261.0" layoutY="137.0" prefHeight="388.0" prefWidth="312.0">
+               <children>
+                  <TextFlow prefHeight="387.0" prefWidth="312.0">
+                     <children>
+                        <TextArea fx:id="output" editable="false" prefHeight="393.0" prefWidth="315.0" text="Acceptable Inputs:&#10;Room Number, formatted as: Room XXX&#10;&#9;Ex: Room 905&#10;Entrance Names:&#10;&#9;200 Hall Entrance N&#10;&#9;200 Hall Entrance S&#10;&#9;400 Hall Entrance N&#10;&#9;800 Hall Entrance N&#10;&#9;800 Hall Entrance S&#10;&#9;700 Hall Entrance W&#10;&#9;600 Hall Entrance N&#10;Special Rooms:&#10;&#9;Library&#10;&#9;Student Center&#10;&#9;Food Court&#10;&#9;GED&#10;&#9;Recruitment Center&#10;&#9;Customer Care&#10;&#9;Academic Affairs&#10;&#9;Snack Bar&#10;&#9;Staff Lounge&#10;&#9;Lecture Hall&#10;&#9;Student Open Lab&#10;&#9;Human Resources&#10;&#9;Mail Room&#10;&#9;Facilities Department&#10;&#9;Assessment Center&#10;&#9;Bookstore&#10;&#9;Adult Education" />
+                     </children>
+                  </TextFlow>
+               </children>
+            </Pane>
+            <TextField fx:id="startInput" layoutX="133.0" layoutY="222.0" prefHeight="25.0" prefWidth="118.0" />
+            <TextField fx:id="endInput" layoutX="133.0" layoutY="306.0" prefHeight="25.0" prefWidth="118.0" />
+            <Label layoutX="41.0" layoutY="226.0" text="Starting Point:" />
+            <Label layoutX="41.0" layoutY="310.0" text="Destination:" />
+            <Label layoutX="379.0" layoutY="111.0" text="Directions">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="88.0" layoutY="393.0" mnemonicParsing="false" onAction="#getDirections" prefHeight="25.0" prefWidth="104.0" text="Get Directions" />
+            <Button layoutX="120.0" layoutY="434.0" mnemonicParsing="false" onAction="#getHelp" text="Help" />
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
