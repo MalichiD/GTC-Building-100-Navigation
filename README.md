@@ -7,3 +7,6 @@ The program includes changes in direction (Turn Left, Turn Right, Continue Strai
 For each room. the program provides directions to/from the closest Node (Hall Intersection or Building Exit), next update will include additional information about the 
 exact room(on the left, on the right) as well as improvements that will prevent the program from pointing to a node that will result in the user passing their destination.
 
+12/2/2022
+The program now supports navigation between all exits and non-lettered rooms on the map, including direction change and with additional information about the exact room (on the left, on the right). The program will also not send the user to a node that will result in the user passing their destination.
+
